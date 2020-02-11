@@ -56,8 +56,8 @@ export class Global {
       .flatMap(f => f.getKeyMatchReg(languageId, filepath))
   }
 
-  static refactorTemplates (keypath: string, languageId?: string) {
-    return uniq(this.enabledFrameworks.flatMap(f => f.refactorTemplates(keypath, languageId)))
+  static refactorTemplates (keypath: string, languageId?: string, content?: string) {
+    return uniq(this.enabledFrameworks.flatMap(f => f.refactorTemplates(keypath, languageId, content)))
   }
 
   static isLanguageIdSupported (languageId: string) {

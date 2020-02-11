@@ -34,7 +34,7 @@ export abstract class Framework {
   /**
    * Return possible choices of replacement for messages extracted from code
    */
-  abstract refactorTemplates (keypath: string, languageId?: string): string[]
+  abstract refactorTemplates (keypath: string, languageId?: string, content?: string): string[]
 
   /**
    * Locale file's name match
